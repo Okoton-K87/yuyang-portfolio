@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import TitleHeader from "../components/TitleHeader";
+const BASE = import.meta.env.BASE_URL;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +56,7 @@ const AppShowcase = () => {
                     <div ref={rydeRef} className="first-project-wrapper">
                         <div className="image-wrapper group">
                             <img
-                                src="/images/Projects/RoomForOne1.png"
+                                src={`${BASE}images/Projects/RoomForOne1.png`}
                                 alt="Room For One"
                                 className="w-full h-full object-cover rounded-xl absolute inset-0"
                             />
@@ -85,7 +86,7 @@ const AppShowcase = () => {
                         <div className="project" ref={libraryRef}>
                             <div className="image-wrapper bg-[#FFEFDB] relative group">
                                 <img
-                                    src="/images/Projects/Research.png"
+                                    src={`${BASE}images/Projects/Research.png`}
                                     alt="PCG Research"
                                     className="w-full h-full object-contain rounded-xl"
                                 />
@@ -108,7 +109,7 @@ const AppShowcase = () => {
                         <div className="project" ref={ycDirectoryRef}>
                             <div className="image-wrapper bg-[#FFE7EB] relative group overflow-hidden">
                                 <img
-                                    src="/images/Projects/Games.png"
+                                    src={`${BASE}images/Projects/Games.png`}
                                     alt="YC Directory App"
                                     className="w-full h-full object-contain rounded-xl"
                                 />

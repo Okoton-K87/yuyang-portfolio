@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/Models/Contact/ContactExperience";
+import ContactExperience from "../components/Models/Contact/ContactExperience"
+const BASE = import.meta.env.BASE_URL;
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -100,7 +101,7 @@ const Contact = () => {
                                             {loading ? "Sending..." : "Send Message"}
                                         </p>
                                         <div className="arrow-wrapper">
-                                            <img src="/images/arrow-down.svg" alt="arrow" />
+                                            <img src={`${BASE}images/arrow-down.svg`} alt="arrow" />
                                         </div>
                                     </div>
                                 </button>
